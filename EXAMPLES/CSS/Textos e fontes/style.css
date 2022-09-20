@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Geostar&family=Roboto:wght@100&display=swap");
+p {
+  font-family: Arial;
+  font-size: 20px; /*Tamanho da fonte*/
+  font-weight: bold; /* Define peso da fonte (deixa em negrito com fonte weight e 600*/
+  line-height: 1; /* Espaçamento entre linhas*/
+}
+
+h1 {
+  text-align: center; /*Alinhamento do texto*/
+  text-decoration: underline; /* Pode ser usado para botar underline, traços e decorações em um texto*/
+}

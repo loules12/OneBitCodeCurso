@@ -1,0 +1,26 @@
+li a {
+  /* Seletor de dependência */
+  color: bisque;
+}
+
+li > a {
+  /* Seletor de classe filho vai funcionar a todos os elementos que são filhos do elemento LI diretamente.*/
+  color: aquamarine;
+}
+
+h1 + h4 {
+  /* Utilizado para itens adjacentes, neste caso vai ser aplicado na tag h4 quando ela vinher após a tag h1 */
+  border: 5px dashed;
+}
+a[href="/recibo"] {
+  /* É utilizado para referência a um atributo especifico que esteja na devida validação da estrutura acima */
+  color: orange;
+}
+
+li:nth-of-type(2) {
+  /* Pode ser utilizado quando quer estilizar o elemento definido dentro dos parenteses da seguinte forma
+  dentro do li use isso em todos os elementos da segunda posição, se tem varios li no documento, todos os segundos parâmetros
+  serão utilizados desta forma. Funciona também com parâmetros especificos como o odd que seleciona todos os números impares dentro
+  do local selecionado.*/
+  color: red;
+}

@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  background-color: darkgray;
+  min-height: 100vh;
+  display: flex;
+  gap: 0px 15px;
+  /* flex-direction: column;  Faz o ajuste da direção na qual os objetos serão dispostos! */
+  justify-content: center; /* Ajuste Orizontal e quanto em coluna ele é alterado para vertical. */
+  align-items: center; /* Ajuste Vertical */
+  flex-wrap: wrap; /* Quebra de linha responsiva */
+}
+.item {
+  /* width: 200px; */
+  height: 200px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 200px; /* Tamanho base do item */
+  flex-grow: 1; /* Faz com que a quebra de linha não inicie assim que começar a diminuir o tamanho 
+  da tela, fazendo com que os itens quebre de linha apenas quando alcançarem 200 px, ao quebrar a linha
+  a flex-box em questão ocupa todo o espaço disponível na linha posterior. Pode ser ativado e desativado
+  usando os números 1 ou 0 (números acima de 1 não causa diferença quando utilizado em conteiners*/
+}
+
+.item1 {
+  flex-shrink: 2; /* Usado para controlar o quanto um item especifico vai ser diminuido. Neste caso
+  o item 1 vai diminuir mais do que os outros a partir do limite do flex-basis, util quando não
+  se tem um flex-wrap, pois o flex-wrap é responsavel por quebrar a linha de modo responsivo, tendo
+  como parâmetro de quebra da linha o mesmo do flex-shrink */
+}
+
+.item2 {
+}
+
+.item3 {
+}
