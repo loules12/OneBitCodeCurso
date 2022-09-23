@@ -7,13 +7,12 @@
   background-color: darkgray;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /*Define o espaço da tela que sera usado por cada coluna do grid  e pode ser definido
+  grid-template-columns: 1fr 2fr 1fr 1fr; /*Define o espaço da tela que sera usado por cada coluna do grid  e pode ser definido
   por porcentagem ou frame (definido como fr) existe um método chamado repeat() que pode definir quantidade
   de colunas e quantos frames vão ser aplicados a cada coluna respectivamente.*/
-  padding: 10px;
   gap: 10px 15px;
   /* grid-template-rows: repeat(3, 1fr); Basicamente a mesma coisa do grid-template-columns, porem na orientação de linha */
-  grid-auto-rows: minmax(210px, 100%);  /* Define o tamanho que cada linha pode ocupar tendo como valor fixo o primeiro valor
+  grid-auto-rows: minmax(310px, auto);  /* Define o tamanho que cada linha pode ocupar tendo como valor fixo o primeiro valor
   e como valor variavel o segundo, assim ocupando todo o espaço disponível mas não deixando ser diminuido abaixo de 210px como definido */
 }
 .item {
