@@ -10,14 +10,49 @@
   grid-template-columns: repeat(3, 1fr); /*Define o espaço da tela que sera usado por cada coluna do grid  e pode ser definido
   por porcentagem ou frame (definido como fr) existe um método chamado repeat() que pode definir quantidade
   de colunas e quantos frames vão ser aplicados a cada coluna respectivamente.*/
-  padding: 10px;
-  gap: 10px 15px;
-  /* grid-template-rows: repeat(3, 1fr); Basicamente a mesma coisa do grid-template-columns, porem na orientação de linha */
-  grid-auto-rows: minmax(210px, 100%);  /* Define o tamanho que cada linha pode ocupar tendo como valor fixo o primeiro valor
+  grid-auto-rows: minmax(80px, auto);  /* Define o tamanho que cada linha pode ocupar tendo como valor fixo o primeiro valor
   e como valor variavel o segundo, assim ocupando todo o espaço disponível mas não deixando ser diminuido abaixo de 210px como definido */
+  /* grid-template-rows: repeat(3, 1fr); Basicamente a mesma coisa do grid-template-columns, porem na orientação de linha */
+  gap: 10px 15px;
+  grid-template-areas: 
+  "item1 item1 item1"
+  "item2 item2 item3"
+  "item2 item2 item4"
+  "item5 item5 item5"
+  "item5 item5 item5"
+  "item6 item7 item7"
+  "item8 item7 item7"
+  "item9 item9 item9";
 }
 .item {
   border: 2px solid black;
   background-color: white;
   font-size: 30px;
+}
+.item1{
+  grid-area: item1;
+}
+.item2{
+  grid-area: item2;
+}
+.item3{
+  grid-area: item3;
+}
+.item4{
+  grid-area: item4;
+}
+.item5{
+  grid-area: item5;
+}
+.item6{
+  grid-area: item6;
+}
+.item7{
+  grid-area: item7;
+}
+.item8{
+  grid-area: item8;
+}
+.item9{
+  grid-area: item9;
 }
