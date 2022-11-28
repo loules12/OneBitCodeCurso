@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Animation Lib -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    body {
+      background-color: rgb(44, 0, 241);
+      color: white;
+      font-size: 40px;
+    }
+  </style>
+  
+  <title>Animation Lib</title>
+</head>
+<body>
+  
+  <div data-aos="fade-up" class="container">
+    <p>Testando efeito!</p>
+  </div>
+  <div data-aos="zoom-in-up" class="container" data-aos-duration="2000">
+    <p>Testando efeito!</p>
+  </div>
+
+
+  <!-- Animation Script-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
