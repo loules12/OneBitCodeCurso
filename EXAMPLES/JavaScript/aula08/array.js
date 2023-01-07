@@ -46,3 +46,21 @@ const outros = arr.slice(-4,)
 console.log(arr)
 console.log(hobbits)
 console.log(outros)
+
+// concat  --> Usado para concatenar varios arrays e junta-los em um novo
+const sociedade = hobbits.concat(outros)
+console.log(sociedade)
+
+// Substituição dos elementos
+// splice  --> Utilizado para substituir ou deletar 1 posição especifica de um array
+
+const elementosRemovidos = sociedade.splice(indice, 1, "Gandalf, o cinzento")  // É passado o indice, após é passado quantos elementos deve ser substituido ou deletado e após isto se passa o que deve ser colocado no lugar
+console.log(sociedade)
+console.log(elementosRemovidos)
+
+// Iterar sobre os Elementos
+
+for (let indice = 0; indice < sociedade.length; indice++) {
+  const elemento = sociedade[indice]
+  console.log(elemento + "se encontra na posição " + indice)
+}
