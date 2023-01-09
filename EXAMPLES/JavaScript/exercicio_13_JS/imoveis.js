@@ -1,43 +1,58 @@
 let listaImoveis = []
-let imovelPadrao = {
-  nomeProprietario : "",
-  quantQuartos : "",
-  quantBanheiros : "",
-  garagem : ""
-}
+let opcao = 0
 
-let quantImoveis = 0
-
-let imoveisString = ""
 
 do {
-  opcao = parseFloat(prompt("No momento temos " + quantImoveis + " imóveis cadastrados!\n\n---MENU---\n1)Cadastra novo imóvel\n2)Mostrar todos os imóveis\n0)Sair"))
+  opcao = parseFloat(prompt(
+    "Bem-vindo(a) ao cadastro de imóveis!\n"+
+    "Total de imóveis: " + listaImoveis.length +
+    "\n\nEscolha uma opção:" +
+    "\n1)Novo imóvel" +
+    "\n2)Lista de imóveis cadastrados" +
+    "\n0)Sair"
+    ))
 
   switch(opcao){
     case 1:
 
-      imovelPadrao.nomeProprietario = prompt("Nome do proprietário:")
-      imovelPadrao.quantQuartos = prompt("Quantidade de quartos:")
-      imovelPadrao.quantBanheiros = prompt("Quantidade de banheiros:")
-      imovelPadrao.garagem = prompt("Tem garagem?")
+      const imovel = {}
 
-      listaImoveis.push(imovelPadrao)
-      
-      
-      for(let i = 0; i < listaImoveis.length; i++) {
-        imoveisString += ("Casa de " + listaImoveis[i].nomeProprietario + "\nContem " + listaImoveis[i].quantQuartos + " quartos\nContem " + listaImoveis[i].quantBanheiros + " banheiro(s)\nCom garagem: " +listaImoveis[i].garagem + "\n\n")
+      imovel.nomeProprietario = prompt("Nome do proprietário:")
+      imovel.quantQuartos = prompt("Quantidade de quartos:")
+      imovel.quantBanheiros = prompt("Quantidade de banheiros:")
+      imovel.garagem = prompt("O imóvel tem garagem? (Sim/Não)")
+
+      const confirmacao = confirm(
+        "Salvar este imóvel?\n"+
+        "\nProprietário: " + imovel.nomeProprietario +
+        "\nQuartos: " + imovel.quantQuartos +
+        "\nBanheiros: " + imovel.quantBanheiros + 
+        "\nTem garagem? " + imovel.garagem
+      )
+
+      if(confirmacao) {
+        listaImoveis.push(imovel)
+        alert("Imóvel salvo com sucesso!")
+      } else {
+        alert("Voltando ao menu")
       }
-
-      quantImoveis++
-
+      
       break
     case 2:
       if(listaImoveis.length === 0) {
         alert("Não tem nenhum imóvel cadastrado no momento.")
         break
       } else {
-        alert(imoveisString)
-      break
+        for(let i = 0; i < listaImoveis.length; i++){
+          alert(
+            "Imóvel - " + (i + 1) +
+            "\nProprietário: " + listaImoveis[i].nomeProprietario +
+            "\nQuartos: " + listaImoveis[i].quantQuartos +
+            "\nBanheiros: " + listaImoveis[i].quantBanheiros +
+            "\nPossui garagem? " + listaImoveis[i].garagem
+          )
+        }
+        break
       }
     case 0:
       alert("Finalizando...")
