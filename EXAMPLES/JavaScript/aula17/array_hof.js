@@ -17,7 +17,7 @@ const personagens = [
 // }
 
 const nomes = personagens.map(function(){
-  return personagem.nome
+  return personagens.nome
 })
 
 console.log(nomes)
@@ -60,4 +60,9 @@ const racas = personagens.reduce(function (valorAcumulado, personagem) {
 
 // Sort  --> Ordena o array de acordo com algum item ou especificação, ele modifica o proprio array
 
-personagens.sort()
+const personagensOrdenados = personagens.slice().sort(function (a, b) {
+  return a.nivel - b.nivel
+})
+
+console.log(personagens)
+console.log(personagensOrdenados)
