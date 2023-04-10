@@ -2,42 +2,28 @@ function escalarJogador(){
 
   const lineupList = document.getElementById('lista-de-escalacao')
 
-  const h3 = document.createElement('h3')
-  h3.innerText = "Cadastro de jogador:"
+  const pposition = document.getElementById('pposition')
+  const pname = document.getElementById('pname')
+  const pnum = document.getElementById('pnumber')
 
   const ul = document.createElement('ul')
 
-  const playerName = document.createElement('li') 
-  playerName.innerText = "Nome: "
-  const pNameInput = document.createElement('input')
-  pNameInput.type = 'text'
-  pNameInput.name = 'fullname'
+  const ppositionLi = document.createElement('li')
+  ppositionLi.appendChild(pposition)
+  ul.appendChild(ppositionLi)
   ul.appendChild(document.createElement('br'))
 
-  const playerPosiction = document.createElement('li') 
-  playerPosiction.innerText = "Posição: "
-  const pPosictionInput = document.createElement('input')
-  pPosictionInput.type = 'text'
-  pPosictionInput.name = 'posiction'
-  ul.appendChild(document.createElement('br'))
-  
-  const playerNumber = document.createElement('li') 
-  playerNumber.innerText = "Número da camisa: "
-  const pNumberInput = document.createElement('input')
-  pNumberInput.type = 'text'
-  pNumberInput.name = 'number'
+  const pnameLi = document.createElement('li')
+  pnameLi.appendChild(pname)
+  ul.appendChild(pnameLi)
   ul.appendChild(document.createElement('br'))
 
-  if(pNameInput != null == pPosictionInput != null == pNumberInput != null) {
-    confirm('Confirma a escalação deste jogador?')
-    if (confirm) {
-      playerName.appendChild(pNameInput)
-      ul.appendChild(playerName)
-      playerPosiction.appendChild(pPosictionInput)
-      ul.appendChild(playerPosiction)
-      playerNumber.appendChild(pNumberInput)
-      ul.appendChild(playerNumber)
-    }
-  }
+  const pNumLi = document.createElement('li')
+  pNumLi.appendChild(pnum)
+  ul.appendChild(pNumLi)
+  ul.appendChild(document.createElement('br'))
 
+  lineupList.append(ul)
+
+  console.log(lineupList)
 }

@@ -11,8 +11,15 @@
   <h1>Gerenciamento de jogadores do time</h1>
   <hr>
 
-  <button onclick="escalarJogador()">Escalar um jogador</button>
-  <button onclick="removerJogador()">Remover um jogador</button>
+  <form id="escalarJogadorForm">
+    <label for="pposition">Posição do jogador: </label>
+    <input type="text" id="pposition" name="ppositioni" required><br>
+    <label for="pname">Nome: </label>
+    <input type="text" id="pname" name="pnamei" required><br>
+    <label for="pnumber">Número da camisa: </label>
+    <input type="text" id="pnumber" name="pnumberi" required><br><br>
+    <input type="submit" value="Escalar" onclick="escalarJogador()"><br>
+  </form>
 
   <section id="lista-de-escalacao"></section>
 </body>
