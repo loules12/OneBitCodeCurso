@@ -1,29 +1,32 @@
-function escalarJogador(){
+function addPlayer(){
+  const position = document.getElementById('position').value
+  const name = document.getElementById('name').value
+  const number = document.getElementById('number').value
+  
+  const confirmation = confirm ("Escalar " + name + " como " + position + "?")
 
-  const lineupList = document.getElementById('lista-de-escalacao')
+  if(confirmation) {
+    const teamList = document.getElementById('teamList')
+    const playerItem = document.createElement('li')
+    playerItem.id = 'player-' + number
+    playerItem.innerText = position + ": " + name + " (" + number + ")"
+    teamList.appendChild(playerItem)
 
-  const pposition = document.getElementById('pposition')
-  const pname = document.getElementById('pname')
-  const pnum = document.getElementById('pnumber')
+    document.getElementById('position').value = ''
+    document.getElementById('name').value = ''
+    document.getElementById('number').value = ''
 
-  const ul = document.createElement('ul')
+  }
+}
 
-  const ppositionLi = document.createElement('li')
-  ppositionLi.appendChild(pposition)
-  ul.appendChild(ppositionLi)
-  ul.appendChild(document.createElement('br'))
+function removePlayer() {
+  const numberToRemove = document.getElementById('numberToRemove').value
+  const playerToRemove = document.getElementById('player-' + numberToRemove)
 
-  const pnameLi = document.createElement('li')
-  pnameLi.appendChild(pname)
-  ul.appendChild(pnameLi)
-  ul.appendChild(document.createElement('br'))
+  const confirmation = confirm ("Remover " + playerToRemove.innerText + " da escalação?")
 
-  const pNumLi = document.createElement('li')
-  pNumLi.appendChild(pnum)
-  ul.appendChild(pNumLi)
-  ul.appendChild(document.createElement('br'))
-
-  lineupList.append(ul)
-
-  console.log(lineupList)
+  if(confirmation) {
+    playerToRemove.remove()
+    document.getElementById('numberToRemove').value = ''
+  }
 }
